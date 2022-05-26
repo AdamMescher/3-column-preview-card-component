@@ -5,7 +5,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Wrapper = styled.span`
+const Wrapper = styled.div`
   display: inline-block;
   position: absolute;
   overflow: hidden;
