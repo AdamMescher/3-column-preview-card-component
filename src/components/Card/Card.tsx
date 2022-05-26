@@ -6,14 +6,14 @@ interface Icon {
 }
 
 interface Props {
-  "data-color": string;
+  color: string;
   icon: Icon;
   title: string;
   copy: string;
 }
 
 const Wrapper = styled.article<{ "data-color": string }>`
-  background: ${({ color }) => color};
+  background: ${(props) => props["data-color"]};
   padding: 50px;
   flex: 0 0 328px;
   &:first-child {
@@ -61,7 +61,7 @@ const Button = styled.button<{ "data-color": string }>`
   border: none;
   border-radius: 999999px;
   border: 2px solid transparent;
-  color: ${({ color }) => color};
+  color: ${(props) => props["data-color"]};
   background: var(--very-light-gray);
   font-size: 18px;
   padding: 18px 28px;
@@ -75,7 +75,7 @@ const Button = styled.button<{ "data-color": string }>`
   }
 `;
 
-const Card = ({ "data-color": color, icon, title, copy }: Props) => {
+const Card = ({ color, icon, title, copy }: Props) => {
   return (
     <Wrapper data-color={color}>
       <img src={icon.src} alt={icon.alt} />

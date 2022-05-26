@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Card from "../Card";
+import VisuallyHidden from "../VisuallyHidden";
 import theme from "../../theme";
 
 import Sedans from "../assets/icon-sedans.svg";
@@ -55,6 +56,9 @@ const cards = [
 function App() {
   return (
     <Wrapper data-testid="app">
+      <VisuallyHidden>
+        <h1>three column card preview card component sandbox</h1>
+      </VisuallyHidden>
       {cards.map(({ color, icon, title, copy }) => (
         <Card key={title} color={color} icon={icon} title={title} copy={copy} />
       ))}
