@@ -15,7 +15,7 @@ interface Props {
 const Wrapper = styled.article<{ color: string }>`
   background: ${({ color }) => color};
   padding: 50px;
-  flex: 1 0 328px;
+  flex: 0 0 328px;
   &:first-child {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
@@ -24,9 +24,9 @@ const Wrapper = styled.article<{ color: string }>`
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
   }
-  @media (min-width: 840px) {
+  @media (min-width: 875px) {
     padding: 40px;
-    flex: 1 0 275px;
+    flex: 0 0 275px;
     min-height: 450px;
     &:first-child {
       border-top-right-radius: 0;
@@ -52,7 +52,7 @@ const Copy = styled.p`
   width: 26ch;
   line-height: 1.8;
   color: var(--transparent-white);
-  @media (min-width: 840px) {
+  @media (min-width: 875px) {
     width: 23ch;
   }
 `;
