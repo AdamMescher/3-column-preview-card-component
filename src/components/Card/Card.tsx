@@ -16,11 +16,11 @@ const Wrapper = styled.article<{ "data-color": string }>`
   background: ${(props) => props["data-color"]};
   padding: 50px;
   flex: 0 0 328px;
-  &:first-child {
-    border-top-left-radius: 12px;
+  &:first-of-type {
     border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
   }
-  &:last-child {
+  &:last-of-type {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
   }
@@ -28,12 +28,12 @@ const Wrapper = styled.article<{ "data-color": string }>`
     padding: 40px;
     flex: 0 0 275px;
     min-height: 450px;
-    &:first-child {
+    &:first-of-type {
       border-top-right-radius: 0;
       border-top-left-radius: 12px;
       border-bottom-left-radius: 12px;
     }
-    &:last-child {
+    &:last-of-type {
       border-bottom-left-radius: 0;
       border-top-right-radius: 12px;
       border-bottom-right-radius: 12px;
