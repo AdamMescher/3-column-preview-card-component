@@ -6,13 +6,13 @@ interface Icon {
 }
 
 interface Props {
-  color: string;
+  "data-color": string;
   icon: Icon;
   title: string;
   copy: string;
 }
 
-const Wrapper = styled.article<{ color: string }>`
+const Wrapper = styled.article<{ "data-color": string }>`
   background: ${({ color }) => color};
   padding: 50px;
   flex: 0 0 328px;
@@ -56,7 +56,7 @@ const Copy = styled.p`
     width: 23ch;
   }
 `;
-const Button = styled.button<{ color: string }>`
+const Button = styled.button<{ "data-color": string }>`
   margin-top: 30px;
   border: none;
   border-radius: 999999px;
@@ -75,13 +75,13 @@ const Button = styled.button<{ color: string }>`
   }
 `;
 
-const Card = ({ color, icon, title, copy }: Props) => {
+const Card = ({ "data-color": color, icon, title, copy }: Props) => {
   return (
-    <Wrapper color={color}>
+    <Wrapper data-color={color}>
       <img src={icon.src} alt={icon.alt} />
       <Title>{title}</Title>
       <Copy>{copy}</Copy>
-      <Button color={color}>Learn More</Button>
+      <Button data-color={color}>Learn More</Button>
     </Wrapper>
   );
 };
